@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Impact";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Impact"), local("Impact"), url("../assets/fonts/impact.ttf") format("truetype");
+}
+.hide{
+    display: none;
+}
+page-main {
+text-align: center;
+}
+
+.input-cover {
+  position: static;
+}
+
+.myCard{
+  /* position:relative; */
+  background-color: transparent;
+
+}
+
+.myOverlay{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    z-index: 99;
+    bottom: 0px;
+    opacity: 1;
+    background: transparent;
+    color: #fff;
+}
