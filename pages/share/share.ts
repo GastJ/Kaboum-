@@ -19,12 +19,11 @@ import { File } from '@ionic-native/file';
 export class SharePage {
 	message : string = "Julien vous a envoyé un Kaboum!";
 	loadimage:any;
-	loadimagenotext:any; 
 	fileDir: string;
 	filePath: string;
   fileName: string;
-  audio: MediaObject;
-  audioList: any[] = [];
+  /*audio: MediaObject;
+  audioList: any[] = [];*/
   dataUri: string;
   constructor(
   	public navCtrl: NavController,
@@ -38,7 +37,6 @@ export class SharePage {
   	) 
   {
   	this.loadimage = this.navParams.get('image');
-  	this.loadimagenotext = this.navParams.get('imageNoText');
 
   	 /*getAudioList();*/
     if(localStorage.getItem("audiolist")) {

@@ -73,25 +73,13 @@ export class MainPage {
     }
     this.camera.getPicture(options).then((imageData) => {
       this.imageURL = 'data:image/jpeg;base64,' + imageData;
-      /*var self = this;
-      this.img = new Image();
-      this.img.src = this.imageURL;
-      this.img.onload = function(){*/
-        /*this.drawText("");*/
-      /*}*/
-      
-      /*let cameraImageSelector = document.getElementById('camera-image');
-      cameraImageSelector.setAttribute('src', this.imageURL);*/
+      /*this.drawText("");*/
+
     }, (err) => {
       console.log(err);
     });
   }
-  /*saveSharableImage(){
 
-  let canvas = <HTMLCanvasElement>document.getElementById('canvas');
-  let dataURL = canvas.toDataURL();
-  this.imageURL = "data:image/jpeg;base64," + dataURL;
-  }*/
   drawText(message:string){
     let factor = 0.4;
     let img = new Image(); //document.createElement('img');
@@ -113,7 +101,7 @@ export class MainPage {
     this.printAtWordWrap(context, message, canvas.width / 2, canvas.height * 0.8, canvas.height * 0.15, canvas.width / 1.2);
     this.imageRenderURL = canvas.toDataURL();
   }
-  ////////////////////// GOOOOOOOOOOOOOOD LUUUUUUUUUUUUUUUCK ////////////////////////
+  //// Line break while drawing text on canvas ////
   printAtWordWrap( context , message:string, x, y, lineHeight, fitWidth)
   {
     fitWidth = fitWidth || 0;
@@ -147,9 +135,8 @@ export class MainPage {
     if  (idx > 0)
         context.fillText( words.join(' '), x, y + (lineHeight*currentLine) );
   }
-  
-  ////////////////////// GOOOOOOOOOOOOOOD LUUUUUUUUUUUUUUUCK ////////////////////////
-  getAudioList() {
+  //// End of line break ////
+  /*getAudioList() {
     if(localStorage.getItem("audiolist")) {
       this.audioList = JSON.parse(localStorage.getItem("audiolist"));
       console.log(this.audioList);
@@ -191,25 +178,9 @@ export class MainPage {
     }
     this.audio.play();
     this.audio.setVolume(1);
-  }
-  /*ionViewDidLeave(){
-    this.audioList = [];
-    localStorage.removeItem('audiolist');
-  }*/
-  //// KEYBOARD ////
-  /*showKeyboard(){
-    this.keyboard.show();
-    alert(this.keyboard);
-    this.keyboardHideShow = true;
-  }
-  hideKeyboard(){
-    this.keyboard.close();
-    this.keyboardHideShow = false;
   }*/
   navigateofmainpage(){ 
       let image = this.imageRenderURL; 
-      let imageNoText = this.imageURL;
-      /*let itemText = this.newItem;*/
-      this.navCtrl.push(SharePage,{ image: image, imageNoText: imageNoText});
+      this.navCtrl.push(SharePage,{ image: image });
   }
 }

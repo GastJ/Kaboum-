@@ -14,6 +14,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@font-face {
+  font-family: "Gothic";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gothic"), local("Gothic"), url("../assets/fonts/GOTHIC.TTF") format("truetype");
+}
 
 ion-content {
     /* @include linear-gradient(left,$facebook-messenger); */
@@ -23,7 +29,11 @@ ion-content {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    font-family: Helvetica, sans-serif;
   }
+.kaboum{
+	font-family: Gothic, sans-serif;
+}
 .ios, .md, .wp {
 
 	h1 {

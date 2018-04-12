@@ -16,23 +16,13 @@
 <ion-content padding>
 	<ion-card>
 		<ion-card-content>
-			<!-- <ion-item>
-				<img src="{{ loadimage }}"/>
-				<button ion-button block (click)="shareImage()"> Share </button>
-			</ion-item> -->
-			<!-- <h4>Image Preview</h4> -->
-			<!-- <img src="{{ loadimagenotext }}" alt=""/> -->
 			<img class="imgLoad" src="{{ loadimage }}" alt=""/>	
-		 	<!-- <ion-card class="myCard">
-		 				  	<img src="{{ loadimagenotext }}" alt=""/>
-		 				  	<img src="{{ loadimage }}" alt=""/>	
-		 	</ion-card> -->
-		 	<ion-list>
-			    <ion-item full class="bgblack resizeList2" *ngFor="let audio of audioList; index as i;">
-			      <p class="resizeSound">{{audio.filename}}</p>
-			      <button class="playbutton" ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
-			    </ion-item>
-			</ion-list>
+		 	<!-- <ion-list>
+		 				    <ion-item full class="bgblack resizeList2" *ngFor="let audio of audioList; index as i;">
+		 				      <p class="resizeSound">{{audio.filename}}</p>
+		 				      <button class="playbutton" ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
+		 				    </ion-item>
+		 				</ion-list> -->
 		 	<ion-grid>
 			      <ion-row>
 				        <ion-col class="flexcontainer">

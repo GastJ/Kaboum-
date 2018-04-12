@@ -16,11 +16,8 @@
 <ion-content padding>
 	<ion-card>
 		<ion-card-content>
-			<h4>Take a picture / add image and record audio</h4>
+			<h4>Take a picture or add image <!-- and record audio --></h4>
 			<br>
-			<!-- <ion-fab edge right> 
-				<button ion-fab color="dark" (click)="takePicture()"><ion-icon ios="ios-camera" md="md-camera"></ion-icon></button>
-			</ion-fab> -->
 		    <ion-row>
 			    <ion-col class="flexcontainer">
 			       	<button ion-fab icon-only color="dark" (click)="takePicture()">
@@ -32,78 +29,30 @@
 			        	<ion-icon ios="ios-image" md="md-image" color="light"></ion-icon>
 			       	</button>
 			    </ion-col>
-			    <ion-col class="flexcontainer">
-			       	<button ion-fab full color="dark" (click)="startRecord()" *ngIf="!recording"><ion-icon name="mic" color="light"></ion-icon></button>
-			       	<button ion-fab full color="dark" (click)="stopRecord()" *ngIf="recording"><ion-icon name="mic-off" color="light"></ion-icon></button>
-			    </ion-col>
+			   <!--  <ion-col class="flexcontainer">
+			      	<button ion-fab full color="dark" (click)="startRecord()" *ngIf="!recording"><ion-icon name="mic" color="light"></ion-icon></button>
+			      	<button ion-fab full color="dark" (click)="stopRecord()" *ngIf="recording"><ion-icon name="mic-off" color="light"></ion-icon></button>
+			   </ion-col> -->
 		    </ion-row>
 			<br>
-			<!-- <ion-list>
-			    <ion-item full class="bgblack resizeList" *ngFor="let audio of audioList; index as i;">
-			      <p class="resizeSound">{{audio.filename}}</p>
-			      <button class="playbutton" ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
-			    </ion-item>
-			</ion-list> -->
 			<br>
-			    <!-- <h4>Image Preview</h4> -->
-		 	<!-- <ion-card class="myCard"> -->
-			  	<img [src]="this.imageURL" (load)="drawText('')" style="display:none;" alt=""/>
-			  	<!-- <img [src]="this.imageRenderURL" alt=""/> -->
-			  	<!-- <canvas id="canvasTemp"></canvas> -->
-			  	<!-- <div class="myOverlay" [innerHTML]=newItem></div> --> 	
-		 	<!-- </ion-card> -->
+			<img [src]="this.imageURL" (load)="drawText('')" style="display:none;" alt=""/>
 		 	<div>
 		 		<img [src]="this.imageRenderURL" alt=""/>
 		 		<ion-item *ngIf="this.imageRenderURL">
                 <ion-label color="primary">Add text</ion-label>
                 <ion-input [(ngModel)]='newItem' 
                 (input)='drawText($event.target.value)'
-                
                 class="center-button" type="text" placeholder="Text on image" value=""></ion-input>
             	</ion-item>
 		 	</div>
-            <ion-list>
-			    <ion-item full class="bgblack resizeList" *ngFor="let audio of audioList; index as i;">
-			      <p class="resizeSound">{{audio.filename}}</p>
-			      <button class="playbutton" ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
-			    </ion-item>
-			</ion-list>
-			<!-- <h4>or</h4>
+            <!-- <ion-list>
+            			    <ion-item full class="bgblack resizeList" *ngFor="let audio of audioList; index as i;">
+            			      <p class="resizeSound">{{audio.filename}}</p>
+            			      <button class="playbutton" ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
+            			    </ion-item>
+            			</ion-list> -->
 			<br>
-			<h4>Add image :</h4> -->
-			<!-- <br> -->
-		    <!-- <p>{{imageURI}}</p> -->
-		    <!-- <ion-row>
-		    			    <ion-col class="flexcontainer">
-		    			       	<button ion-fab icon-only color="dark" (click)="getImage()">
-		    			        	<ion-icon ios="ios-add" md="md-add" color="light"></ion-icon>
-		    			       	</button>
-		    			    </ion-col>
-		    </ion-row> -->
-		    <!-- <button ion-button color="dark" (click)="getImage()">Get Image</button> -->
-			<!-- <br> -->
-			<!-- <br>
-			<h4>Add sound :</h4> 
-			<br> -->
-			<!-- <ion-row>
-			    <ion-col class="flexcontainer">
-			       	<button ion-fab full color="dark" (click)="stopRecord()" *ngIf="recording"><ion-icon name="mic-off" color="light"></ion-icon></button>
-			    </ion-col>
-					    </ion-row>
-			        	<ion-row>
-			    <ion-col class="flexcontainer">
-			       	<button ion-fab full color="dark" (click)="startRecord()" *ngIf="!recording"><ion-icon name="mic" color="light"></ion-icon></button>
-			    </ion-col>
-					    </ion-row> -->
-        	<!-- <ion-list>
-        				    <ion-item full class="bgblack resizeList" *ngFor="let audio of audioList; index as i;">
-        				      <p class="resizeSound">{{audio.filename}}</p>
-        				      <button class="playbutton" ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
-        				    </ion-item>
-        				</ion-list> -->
-			<br>
-			<!-- <button ion-button color="dark" (click)="hideKeyboard()" *ngIf="keyboardHideShow"><ion-icon ios="ios-text" md="md-text"></ion-icon>&nbsp;&nbsp;Close text</button>
-			<button ion-button color="dark" (click)="showKeyboard()" *ngIf="!keyboardHideShow"><ion-icon ios="ios-text" md="md-text"></ion-icon>&nbsp;&nbsp;Add text</button> -->
 			<br>
 			Once your done : 
 			<br>
