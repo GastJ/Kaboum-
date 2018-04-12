@@ -22,8 +22,8 @@ export class SharePage {
 	fileDir: string;
 	filePath: string;
   fileName: string;
-  /*audio: MediaObject;
-  audioList: any[] = [];*/
+  audio: MediaObject;
+  audioList: any[] = [];
   dataUri: string;
   constructor(
   	public navCtrl: NavController,

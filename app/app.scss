@@ -21,6 +21,13 @@
   src: local("Gothic"), local("Gothic"), url("../assets/fonts/GOTHIC.TTF") format("truetype");
 }
 
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Helvetica"), local("Helvetica"), url("../assets/fonts/helvetica.ttf") format("truetype");
+}
+
 ion-content {
     /* @include linear-gradient(left,$facebook-messenger); */
     /* @include linear-gradient(left,$haikus);  */
